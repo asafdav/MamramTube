@@ -1,0 +1,10 @@
+{
+  "name": "mamram-tube",
+  "version": "1.0.0",
+  "description": "LiveCoding is Awesome!",
+  "dependencies": {
+    "express": "~4.4.3"
+  },
+  "devDependencies": {
+  }
+}
