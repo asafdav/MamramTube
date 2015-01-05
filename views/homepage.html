@@ -1,0 +1,21 @@
+<form class="form-inline">
+  <input class="form-control" type="text" ng-model="keyword" />
+  <button class="btn btn-default" ng-click="search()">Load Videos</button>
+</form>
+
+<hr>
+<div class="videos">
+  <h4 ng-show="isLoading">Loading...</h4>
+
+  <div class="results" ng-show="videos.length > 0 && !isLoading">
+    <h4>{{videos.length}} results:</h4>
+    <input type="text" class="form-control" placeholder="Filter results"
+           ng-model="term" />
+
+    <ul class="entires">
+      <li ng-repeat="video in videos | filter:term">
+        <a href="#/video/{{video.id}}">{{video.title}}</a> ({{video.published}})
+      </li>
+    </ul>
+  </div>
+</div>

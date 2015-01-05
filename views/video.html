@@ -1,0 +1,7 @@
+<div class="video">
+  <h1>{{video.title}} ({{video.published}})</h1>
+  <p><span class="strong">Views:</span> {{video.views}}</p>
+  <p>{{video.content}}</p>
+
+  <youtube-player ng-if="video" video-id="video.id"></youtube-player>
+</div>
